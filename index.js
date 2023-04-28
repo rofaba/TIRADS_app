@@ -10,6 +10,8 @@ function calcularTIRADS() {
             echogenicFociScore += parseInt(echogenicFociCheckboxes[i].value);
         }
     }
+    
+    //comprobaciones temporales
     console.log(compositionScore)
     console.log(echogenicityScore)
     console.log(marginScore)
@@ -19,18 +21,25 @@ function calcularTIRADS() {
     let tirads = compositionScore + echogenicityScore + marginScore + echogenicFociScore;
     console.log('TIRADS' + tirads)
 
-    let recommendations = "";
+    let clasif = "";
+    let recom = "";
     if (tirads === 0) {
-        recommendations = "TIRADS 1: Benign. no FNA";
+        clasif = "TIRADS 1"
+        recom = " Benign. no FNA";
     } else if ((tirads === 1) || tirads === 2) {
-      recommendations = "TIRADS 2: Not Suspicius, No FNA";
+      clasif = "TIRADS 2"
+      recom = " Not Suspicius, No FNA";
     } else if (tirads === 3) {
-      recommendations = "TIRADS 3: Midly Suspicius. FNA if >= 2.5cm Follw if >= 1.5cm";
+      clasif = "TIRADS 3"
+      recom = " Midly Suspicius. FNA if >= 2.5cm Follw if >= 1.5cm";
     } else if ((tirads >= 4) && (tirads <=6)) {
-      recommendations = "TIRADS 4: Moderatly Suspicious. FNA if >= 1.5 cm  Follow if >= 1cm";
+      clasif = "TIRADS 4"
+      recom = " Moderatly Suspicious. FNA if >= 1.5 cm  Follow if >= 1cm";
     } else if (tirads >= 7) {
-      recommendations = "TIRADS 5: Highly suspicious FNA if > 1cm Follow if > 0.5cm";
+      clasif = "TIRADS 5"
+      recom = " Highly suspicious FNA if > 1cm Follow if > 0.5cm";
     }
   
-    document.querySelector('.recom').innerHTML = recommendations;
+    document.querySelector('#clasificacion').innerHTML = clasif;
+    document.querySelector('#recomendacion').innerHTML = recom;
   }
