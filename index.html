@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Agregamos la hoja de estilos de Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
 
     <title>TIRADS Calculator</title>
   </head>
@@ -12,20 +13,20 @@
   <body class="min-h-screen m-auto max-w-5xl bg-gray-100 justify-center">
     <header class="bg-white shadow">
       <nav
-        class="container flex items-center justify-between px-6 py-4 mx-auto"
+        class="container flex items-center justify-between px-6 py-4 mx-auto my-auto"
       >
         <div class="flex items-center">
-          <h1 class="text-lg font-semibold">TIRADS Calculator</h1>
+          <a href="index.html"><h1 class="text-xl font-semibold text-blue-500"> TIRADS Calculator </h1> </div></a>
         </div>
         <div class="flex items-center">
-          <a href="#" class="mx-4 text-gray-600 hover:text-gray-900">About</a>
-          <a href="#" class="mx-4 text-gray-600 hover:text-gray-900">Contact</a>
+          <a href="./about.html" class="mx-4 text-gray-600 hover:text-blue-500">Background</a>
+          <a href="./bilbiography.html" class="mx-4 text-gray-600 hover:text-blue-500">Bibliography</a>
         </div>
       </nav>
     </header>
     <main class="container mx-auto py-6">
-      <div class="grid grid-cols-2 justify-between p-10">
-        <form class="bg-slate-300 m-12 py-6 px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 justify-between p-10">
+        <form class="bg-yellow-400 my-8 py-6 px-12 rounded-lg shadow-md">
           <div class="form-group">
             <label
               for="composition"
@@ -131,19 +132,19 @@
 
           <br />
           <button
-            class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onclick="calcularTIRADS()"
           >
             Calcular TIRADS
           </button>
           <button
-            class="bg-gray-400 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded my-4"
+            class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded my-4"
             type="reset"
           >
             Resetear formulario
           </button>
         </form>
-        <div class="recom bg-slate-300 m-12 py-6 px-12">
+        <div class="recom bg-green-400 my-8 mx-12 py-6 px-12 rounded-lg shadow-md">
           <h2
             class="justify-center font-sans font-semibold text-xl text-gray-700 pt-6 pb-4"
             id="clasificacion"
@@ -154,9 +155,17 @@
         </div>
       </div>
     </main>
+    <section class="bg-gray-200 py-4">
+        <div class="container mx-auto px-4">
+          <p class="text-center text-gray-600 text-sm">
+            La presente aplicación es una herramienta diseñada con fines únicamente educativos y no está destinada a ser utilizada como una herramienta de diagnóstico médico. La versión actual de la aplicación no está destinada al uso profesional y no debe utilizarse como sustituto de la evaluación médica profesional y las decisiones de tratamiento. Los resultados que entrega se basan en las entradas del usuario y no en la evaluación clínica del paciente, por lo que no se deben tomar decisiones clínicas importantes basadas en ellos.
+            Si tiene alguna preocupación médica, debe consultar a su médico para obtener una evaluación clínica completa y un diagnóstico preciso.
+          </p>
+        </div>
+    </section>
     <footer class="bg-gray-900 text-white py-4">
       <div class="container mx-auto text-center">
-        <p>&copy; 2023 TIRADS Calculator</p>
+        <p>&copy; 2023 </p>
       </div>
     </footer>
   </body>
