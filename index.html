@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Agregamos la hoja de estilos de Tailwind -->
+   
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
 
     <title>TIRADS Calculator</title>
@@ -13,25 +13,25 @@
   <body class="min-h-screen m-auto max-w-5xl bg-gray-100 justify-center">
     <header class="bg-white shadow">
       <nav
-        class="container flex items-center justify-between px-6 py-4 mx-auto my-auto"
+        class="container flex items-center justify-between px-6 py-2 mx-auto my-auto"
       >
-        <div class="flex items-center">
-          <a href="index.html"><h1 class="text-xl font-semibold text-blue-500"> TIRADS Calculator </h1> </div></a>
+        <div class="flex items justify-between">
+          <a href="index.html"><h1 class="text-2xl font-semibold text-blue-500"> Calculadora TIRADS </h1> </div></a>
         </div>
         <div class="flex items-center">
-          <a href="./about.html" class="mx-4 text-gray-600 hover:text-blue-500">Background</a>
-          <a href="./bilbiography.html" class="mx-4 text-gray-600 hover:text-blue-500">Bibliography</a>
+          <a href="./about.html" class="mx-4 text-gray-900 hover:text-blue-500 text-lg">Background</a>
+          <a href="./bibliography.html" class="mx-4 text-gray-900 hover:text-blue-500 text-lg">Bibliografía</a>
         </div>
       </nav>
     </header>
     <main class="container mx-auto py-6">
       <div class="grid grid-cols-1 md:grid-cols-2 justify-between p-10">
-        <form class="bg-yellow-400 my-8 py-6 px-12 rounded-lg shadow-md">
+        <form class="bg-yellow-400 my-8 py-4 px-12 rounded-lg shadow-md">
           <div class="form-group">
             <label
               for="composition"
-              class="block text-sm font-medium text-gray-700 mb-2"
-              >Composition</label
+              class="block text-lg font-medium text-gray-700 my-2"
+              >Composición</label
             >
             <select
               id="composition"
@@ -52,8 +52,8 @@
           <div class="mb-6">
             <label
               for="echogenicity"
-              class="block text-sm font-medium text-gray-700 mb-2"
-              >Echostructure:</label
+              class="block text-lg font-medium text-gray-700 my-2"
+              >Ecoestructura</label
             >
             <select
               id="echogenicity"
@@ -70,8 +70,8 @@
           <div class="form-group">
             <label
               for="margin"
-              class="block text-sm font-medium text-gray-700 mb-2"
-              >Margin:</label
+              class="block text-lg font-medium text-gray-700 my-2"
+              >Márgenes</label
             >
             <select
               id="margin"
@@ -88,9 +88,9 @@
           <div class="form-group">
             <label
               for="echogenic_foci"
-              class="block text-sm font-medium text-gray-700 mb-2"
+              class="block text-lg font-medium text-gray-700 my-2 mt-4"
             >
-              Echogenic Foci: Choose All That Apply
+              Focos ecogénicos: Marque todos los que aplican
             </label>
             <div class="checkbox-group">
               <input
@@ -100,7 +100,7 @@
                 value="0"
               />
               <label for="none"
-                >None or large comet-tail artifacts 0 points</label
+                >Ninguna o grandes artefactos en cola de cometa 0 points</label
               ><br />
               <input
                 type="checkbox"
@@ -109,7 +109,7 @@
                 value="1"
               />
               <label for="macrocalcifications"
-                >Macrocalcifications 1 point</label
+                >Macrocalcificaciones 1 point</label
               ><br />
               <input
                 type="checkbox"
@@ -118,7 +118,7 @@
                 value="2"
               />
               <label for="peripheral"
-                >Peripheral (rim) calcifications 2 points</label
+                >Calcificaciones periféricas (rim) 2 points</label
               ><br />
               <input
                 type="checkbox"
@@ -126,7 +126,7 @@
                 name="echogenic_foci[]"
                 value="3"
               />
-              <label for="punctate">Punctate echogenic foci 3 points</label>
+              <label for="punctate">Focos ecogénicos puntiformes 3 points</label>
             </div>
           </div>
 
@@ -149,13 +149,13 @@
             class="justify-center font-sans font-semibold text-xl text-gray-700 pt-6 pb-4"
             id="clasificacion"
           >
-            Clasificación y Recomendaciones
+            Clasificación - Recomendación
           </h2>
           <p id="recomendacion"></p>
         </div>
       </div>
     </main>
-    <section class="bg-gray-200 py-4">
+    <section class="bg-gray-200">
         <div class="container mx-auto px-4">
           <p class="text-center text-gray-600 text-sm">
             La presente aplicación es una herramienta diseñada con fines únicamente educativos y no está destinada a ser utilizada como una herramienta de diagnóstico médico. La versión actual de la aplicación no está destinada al uso profesional y no debe utilizarse como sustituto de la evaluación médica profesional y las decisiones de tratamiento. Los resultados que entrega se basan en las entradas del usuario y no en la evaluación clínica del paciente, por lo que no se deben tomar decisiones clínicas importantes basadas en ellos.
