@@ -31,7 +31,7 @@ function calcularTIRADS() {
       recom = " Not Suspicius, No FNA";
     } else if (tirads === 3) {
       clasif = "TIRADS 3"
-      recom = " Midly Suspicius. FNA if >= 2.5cm Follw if >= 1.5cm";
+      recom = " Midly Suspicius. FNA if >= 2.5cm Follow if >= 1.5cm";
     } else if ((tirads >= 4) && (tirads <=6)) {
       clasif = "TIRADS 4"
       recom = " Moderatly Suspicious. FNA if >= 1.5 cm  Follow if >= 1cm";
